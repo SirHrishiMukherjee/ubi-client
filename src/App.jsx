@@ -72,7 +72,7 @@ const Icon = ({ name, className = "w-5 h-5" }) => {
     case "payments":
       return (<svg className={cls(className, common)} fill="none" viewBox="0 0 24 24"><path strokeWidth="1.5" d="M4 7h16M4 12h8M4 17h6"/></svg>);
     case "docs":
-      return (<svg className={cls(className, common)} fill="none" viewBox="0 0 24 24"><path strokeWidth="1.5" d="M7 3h7l5 5v13a1 1 0 0 1-1 1H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"/><path strokeWidth="1.5" d="M14 3v5h5"/></svg>);
+      return (<svg className={cls(className, common)} fill="none" viewBox="0 0 24 24"><path strokeWidth="1.5" d="M7 3h7l5 5v13a1 1 0 0 1-1 1H7a2 2 0 0 1 2-2V5a2 2 0 0 1 2-2z"/><path strokeWidth="1.5" d="M14 3v5h5"/></svg>);
     case "support":
       return (<svg className={cls(className, common)} fill="none" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" strokeWidth="1.5"/><path strokeWidth="1.5" d="M8.5 9.75C9 8 10.3 7 12 7c1.9 0 3 1.2 3 2.6 0 2.3-3 2.1-3 4.4"/><circle cx="12" cy="17" r=".9" fill="currentColor"/></svg>);
     case "settings":
@@ -592,7 +592,7 @@ export default function UBIClientApp() {
 
   // Eligibility letter
   const downloadEligibilityLetter = () => {
-    const text = `UBI Eligibility Confirmation\n\nName: ${user.name}\nEmail: ${user.email}\nResidency: ${user.residency}\n\nStatus: ${program.status}\nMonthly Benefit: ${fmtCurrency(programCfg.benefitAmountMonthly)}\nNext Payment Cycle: ${fmtDate(programCfg.nextCycleDate)}\n\nThis letter confirms your status in the Universal Basic Income program as of ${fmtDate(new Date())}.`;
+    const text = `UBI Eligibility Confirmation\\n\\nName: ${user.name}\\nEmail: ${user.email}\\nResidency: ${user.residency}\\n\\nStatus: ${program.status}\\nMonthly Benefit: ${fmtCurrency(programCfg.benefitAmountMonthly)}\\nNext Payment Cycle: ${fmtDate(programCfg.nextCycleDate)}\\n\\nThis letter confirms your status in the Universal Basic Income program as of ${fmtDate(new Date())}.`;
     downloadText("UBI_Eligibility_Letter.txt", text);
   };
 
